@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Rubik", sans-serif;
+}
+html {
+    font-size: 10px;
+}
+/* color
+    primary color: #e67e22;
+    secondary color: #fdf2e9;
+    header and nav-bar color: #333333;
+    paragraph color: #555;
+*/
+/* Common seletor color */
+h1,
+h2,
+h3,
+h4,
+a {
+  color: #333333;
+}
+p {
+  color: #555;
+}
+header,
+main,
+footer{
+    padding: 1.6rem 2.8rem;
+}
+/* Style for Navigation */
+.header {
+  background-color: #fdf2e9;
+}
+.header .brand img {
+  height: 100%;
+  width: 14.5rem;
+}
+.header, .nav_bar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .nav_bar ul {
+    column-gap: 3.2rem;
+}
+.header .nav_bar ul li {
+    list-style: none;
+    padding: 1rem 0;
+}
+.header .nav_bar ul li a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.header .nav_bar ul li:last-child a {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
