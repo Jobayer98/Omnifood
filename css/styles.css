@@ -8,7 +8,11 @@
   font-family: "Rubik", sans-serif;
 }
 html {
-    font-size: 10px;
+  font-size: 10px;
+}
+body{
+  position: relative;
+  height: 200vh;
 }
 /* color
     primary color: #e67e22;
@@ -27,40 +31,124 @@ a {
 p {
   color: #555;
 }
-header,
-main,
-footer{
-    padding: 1.6rem 2.8rem;
-}
 /* Style for Navigation */
 .header {
   background-color: #fdf2e9;
+  padding: 1.6rem 2.8rem;
+  padding-right: 6rem;
+  position: relative;
+}
+.sticky {
+  position: sticky;
+  top: 0;
 }
 .header .brand img {
   height: 100%;
   width: 14.5rem;
 }
-.header, .nav_bar ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header .brand {
+  margin-right: auto;
+}
+.sticky,
+.nav_bar ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 .header .nav_bar ul {
-    column-gap: 3.2rem;
+  column-gap: 3.2rem;
 }
 .header .nav_bar ul li {
-    list-style: none;
-    padding: 1rem 0;
+  list-style: none;
+  padding: 1rem 0;
 }
 .header .nav_bar ul li a {
-    text-decoration: none;
-    font-size: 1.6rem;
-    font-weight: 500;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: all 300ms ease-in;
 }
 
 .header .nav_bar ul li:last-child a {
-    background-color: #e67e22;
-    color: #fff;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
+  background-color: #e67e22;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+.header .nav_bar ul li a:hover{
+    color:#e67e22;
+}
+
+.icon {
+  height: 36px;
+  width: 36px;
+  stroke: #333333;
+  cursor: pointer;
+  display: none;
+}
+
+
+/* media query for medium device */
+@media screen and (max-width: 768px) {
+    .nav_bar ul {
+      background-color: #eee;
+      min-height: 91vh;
+      display: none;
+      position: fixed;
+      top: 0;
+      right:0;
+      margin-top: 6.6rem;
+      padding: 1.8rem 3.2rem;
+      z-index: 0;
+      opacity: .95;
+      text-align: center;
+  }
+  .header .nav_bar ul li {
+    padding: .7rem 0;
+  }
+  .header .nav_bar ul li:last-child{
+    margin-top: 1.2rem;
+  }
+  .icon {
+    display: block;
+  }
+
+  #open {
+    /* right: 0; */
+    display: block;
+  }
+
+}
+/* @media screen and (max-width: 768px) {
+  .header {
+    position: relative;
+    background-color: #fff;
+  }
+  .header .brand,
+  .icon {
+    opacity: 0;
+  }
+  .nav_bar ul {
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 30%;
+    right: 50%;
+    transform: translate(50%, 30%);
+  }
+  .header .nav_bar ul li a {
+    display: block;
+    font-size: 2.4rem;
+    margin: 0.4rem 0;
+  }
+  .icon {
+    display: block;
+  }
+} */
+
+@media screen and (min-width: 767px) and (max-width: 992px) {
+  .header .nav_bar ul {
+    column-gap: 2.6rem;
+  }
 }
