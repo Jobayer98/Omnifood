@@ -12,7 +12,7 @@ html {
 }
 body {
   position: relative;
-  height: 200vh;
+  min-height: 100vh;
 }
 /* color
     primary color: #e67e22;
@@ -36,7 +36,8 @@ p {
   background-color: #fdf2e9;
   padding: 2.8rem 4.6rem;
   padding-right: 6rem;
-  display: none;
+  z-index: 100;
+  opacity: 0.99;
 }
 .sticky {
   position: sticky;
@@ -218,7 +219,6 @@ p {
 
 .section-steps > h2 {
   font-size: 4.6rem;
-  margin-bottom: 9.6rem;
 }
 .section-steps .steps {
   display: grid;
