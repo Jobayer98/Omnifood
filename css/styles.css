@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap");
 
 * {
   margin: 0;
@@ -10,7 +10,7 @@
 html {
   font-size: 10px;
 }
-body{
+body {
   position: relative;
   height: 200vh;
 }
@@ -36,6 +36,7 @@ p {
   background-color: #fdf2e9;
   padding: 2.8rem 4.6rem;
   padding-right: 6rem;
+  display: none;
 }
 .sticky {
   position: sticky;
@@ -75,14 +76,14 @@ p {
   border-radius: 1rem;
 }
 
-.header .nav_bar ul li a:hover{
-    color:#e67e22;
+.header .nav_bar ul li a:hover {
+  color: #e67e22;
 }
 
-.header .nav_bar ul li:last-child a:hover{
+.header .nav_bar ul li:last-child a:hover {
   color: #fff;
   background-color: #ea9347;
-} 
+}
 
 .icon {
   height: 36px;
@@ -106,7 +107,7 @@ p {
   margin: 0 3.2rem;
 }
 
-.hero .hero-textbox .heading-primary{
+.hero .hero-textbox .heading-primary {
   font-size: 4.4rem;
   font-weight: 700;
   text-align: left;
@@ -116,7 +117,7 @@ p {
   font-size: 2rem;
   text-align: left;
   margin: 3.2rem 0;
-  line-height:3.2rem;
+  line-height: 3.2rem;
 }
 
 .hero-btns {
@@ -138,7 +139,7 @@ p {
 }
 
 .hero-btns .btn-secondary {
-  color:#555;
+  color: #555;
   background-color: #fff;
 }
 
@@ -157,7 +158,7 @@ p {
   border-radius: 50%;
   margin-left: -1.6rem;
 }
-.meals .customers img:first-child{
+.meals .customers img:first-child {
   margin-left: 0;
 }
 
@@ -173,33 +174,139 @@ p {
   font-weight: 600;
 }
 
-.hero .hero-img img{
+.hero .hero-img img {
   height: 50.5rem;
-
 }
 
-/*  */
+/* Style for Sponsor section */
+.sponsor-section {
+  margin: 4.2rem 4.6rem;
+}
+.sponsor-section h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  filter: brightness(0);
+  opacity: 0.5;
+}
+.sponsor-section .sponsors {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sponsors img {
+  height: 3.5rem;
+  filter: brightness(0);
+  opacity: 0.5;
+}
+
+/* Style for Step Section */
+.section-steps {
+  margin: 9.6rem 4.6rem;
+}
+
+.section-steps > p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #e67e22;
+  text-transform: uppercase;
+  margin-bottom: 3.2rem;
+}
+
+.section-steps > h2 {
+  font-size: 4.6rem;
+  margin-bottom: 9.6rem;
+}
+.section-steps .steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  column-gap: 4.2rem;
+  padding: 0 1.8rem;
+  margin: 9.6rem 0;
+}
+
+.section-steps .step-img img {
+  height: 38rem;
+}
+
+.step-textbox .num {
+  font-size: 8rem;
+  font-weight: 700;
+  filter: brightness(0);
+  opacity: 0.1;
+}
+
+.step-textbox .title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 3.2rem;
+}
+
+.step-textbox .description {
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+}
+
+.section-steps .steps .step_3_text {
+  grid-column: 2 / -1;
+}
+.section-steps .steps .step_3_img {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.step-img {
+  position: relative;
+  z-index: 10;
+}
+
+.step-img::before,
+.step-img::after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-img::before {
+  height: 32rem;
+  width: 32rem;
+  background-color: #fdf2e9;
+  z-index: -2;
+}
+.step-img::after {
+  height: 25rem;
+  width: 25rem;
+  background-color: #fae5d3;
+  z-index: -1;
+}
 
 /* media query for medium device */
 @media screen and (max-width: 768px) {
-    .nav_bar ul {
-      background-color: #fdf2e9a5;
-      min-height: 91vh;
-      display: none;
-      position: fixed;
-      top: 0;
-      right:0;
-      margin-top: 6.8rem;
-      padding: 1.8rem 3.2rem;
-      z-index: 0;
-      opacity: .95;
-      text-align: center;
-      
+  .nav_bar ul {
+    background-color: #fdf2e9a5;
+    min-height: 91vh;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 6.8rem;
+    padding: 1.8rem 3.2rem;
+    z-index: 0;
+    opacity: 0.95;
+    text-align: center;
   }
   .header .nav_bar ul li {
-    padding: .7rem 0;
+    padding: 0.7rem 0;
   }
-  .header .nav_bar ul li:last-child{
+  .header .nav_bar ul li:last-child {
     margin-top: 1.2rem;
   }
   .icon {
@@ -210,7 +317,6 @@ p {
     /* right: 0; */
     display: block;
   }
-
 }
 /* @media screen and (max-width: 768px) {
   .header {
